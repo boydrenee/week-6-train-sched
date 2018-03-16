@@ -1,0 +1,77 @@
+<DOCTYPE html>
+	<html>
+		<head>
+			<meta charset='utf-8'>
+			<title>
+				
+			</title>
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+            
+             <!-- jQuery -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+              <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+              <script src=https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js></script>
+
+			     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+            <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+            
+                     
+
+
+
+		</head>
+		<body>
+			<div class="container">
+              <div class="jumbotron">
+                <h1>Any Time is Train Time</h1>      
+                <p>Choo Choo. Chee Chee.</p>
+              </div>
+              <p class="currentsched">Current Train Schedule</p>
+                <table class="traintable">
+                  <thead>
+                    <tr>
+                      <th scope="col">Train Name</th>
+                      <th scope="col">Destination</th>
+                      <th scope="col">Frequency</th>
+                      <th scope="col">Next</th>
+                      <th scope="col">Minutes Away</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td id="trainNameDisplay"></td>
+                      <td id="destinationDisplay"></td>
+                      <td id="frequencyDisplay"></td>
+                      <td id="nextTrainDueDisplay"></td>
+                      <td id="minutesAwayDisplay"></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="addtrain">
+                    <p class="form-group">Add Train</p>
+                    <form>
+                      <div class="form-group">
+                        <label for="Train Name">Train Name</label>
+                        <input type="text" class="form-control" id="trainNameInput">
+                      </div>
+                      <div class="form-group">
+                        <label for="Destination">Destination</label>
+                        <input type="text" class="form-control" id="destinationInput">
+                      </div>
+                      <div class="form-group">
+                        <label for="First Train Time">First Train Time (HHmm military)</label>
+                        <input type="number" class="form-control" id="trainStartTimeInput">
+                      </div>
+                      <div class="form-group">
+                        <label for="Frequency">Frequency (in minutes)</label>
+                        <input type="number" class="form-control" id="trainFrequencyInput">
+                      </div>
+                      <button type="submit" class="btn btn-primary" id="addTrain">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <script src="assets/js/sched.js"></script> 
+            
+		</body>
+	</html>
